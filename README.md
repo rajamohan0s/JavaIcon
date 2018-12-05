@@ -1,2 +1,2 @@
 # iOS-App-Icon-Resizer
-This tool is made by Core Java for Windows &amp; OS X
+Cross platform Java Swing application.

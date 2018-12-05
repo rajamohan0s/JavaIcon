@@ -1,9 +1,3 @@
-/*
- @Author : RAJAMOHANSINGH
- @blog : rajamohansingh4you.blogspot.com
-
- */
-
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.JLabel;
@@ -26,7 +20,7 @@ import java.awt.event.MouseEvent;
 
 import javax.swing.BorderFactory;
 import javax.swing.border.LineBorder;
-// 
+//
 // import javax.swing.*;
 // import java.awt.*;
 

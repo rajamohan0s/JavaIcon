@@ -1,9 +1,3 @@
-/*
- @Author : RAJAMOHANSINGH
- @blog : rajamohansingh4you.blogspot.com
-
- */
-
 
 import java.awt.*;
 import java.awt.event.*;
@@ -238,8 +232,8 @@ public class AppIconMaker
 
       radPeer.addItemListener(new ItemListener() {
          public void itemStateChanged(ItemEvent e) {
-           statusLabel.setText("Email : rajamohansssingh"
-           + (e.getStateChange()==1?"@gmail.com":"unchecked"));
+           statusLabel.setText("Email : some"
+           + (e.getStateChange()==1?"@some.com":"unchecked"));
 		   start2.setEnabled(false);
 		   start.setEnabled(false);
 		   choose.setVisible(false);

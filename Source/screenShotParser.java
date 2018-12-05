@@ -1,7 +1,4 @@
-/*
-@Author : RAJAMOHANSINGH
-@Email : rajamohansssigh@gmail.com
-*/
+
 import java.awt.AlphaComposite;
 import java.awt.Graphics2D;
 import java.awt.RenderingHints;
@@ -14,9 +11,9 @@ public class screenShotParser
 {
 
 	public screenShotParser(String input1 , String input2, String input3, String input4, String input5, String destination){
-		
+
 	try{
-	
+
 		File iphone6 = new File(""+destination+"//4.7inch");
 		iphone6.mkdir();
 		File iphone6sPlus = new File(""+destination+"//5.5inch");
@@ -29,30 +26,30 @@ public class screenShotParser
 		ipadAir.mkdir();
 		File ipadPro = new File(""+destination+"//ipad Pro");
 		ipadPro.mkdir();
-		
+
 		/*
 			@Getting Input Images
 		*/
 		BufferedImage originalImage1 = ImageIO.read(new File(input1));
 		int type1 = originalImage1.getType() == 0? BufferedImage.TYPE_INT_ARGB : originalImage1.getType();
-		
+
 		BufferedImage originalImage2 = ImageIO.read(new File(input2));
 		int type2 = originalImage2.getType() == 0? BufferedImage.TYPE_INT_ARGB : originalImage2.getType();
-		
+
 		BufferedImage originalImage3 = ImageIO.read(new File(input3));
 		int type3 = originalImage3.getType() == 0? BufferedImage.TYPE_INT_ARGB : originalImage3.getType();
-		
+
 		BufferedImage originalImage4 = ImageIO.read(new File(input4));
 		int type4 = originalImage4.getType() == 0? BufferedImage.TYPE_INT_ARGB : originalImage4.getType();
-		
+
 		BufferedImage originalImage5 = ImageIO.read(new File(input5));
 		int type5 = originalImage5.getType() == 0? BufferedImage.TYPE_INT_ARGB : originalImage5.getType();
-			
+
 		/*
 			@iphone 6/6s
 			@screen Size :4.7inch
 		*/
-		
+
 		BufferedImage resizeImageJpg60 = resizeImage(750,1334,originalImage1, type1);
 		ImageIO.write(resizeImageJpg60, "jpg", new File(""+iphone6+"/pic1.jpg"));
 
@@ -67,12 +64,12 @@ public class screenShotParser
 
 		BufferedImage resizeImageJpg00 = resizeImage(750,1334,originalImage5, type5);
 		ImageIO.write(resizeImageJpg00, "jpg", new File(""+iphone6+"/pic5.jpg"));
-		
+
 		/*
 			@iphone 6/6s Plus
 			@screen Size 5.5"
 		*/
-		
+
 		BufferedImage resizeImageJpg63 = resizeImage(1242,2208,originalImage1, type1);
 		ImageIO.write(resizeImageJpg63, "jpg", new File(""+iphone6sPlus+"/pic1.jpg"));
 
@@ -87,12 +84,12 @@ public class screenShotParser
 
 		BufferedImage resizeImageJpg03 = resizeImage(1242,2208,originalImage5, type5);
 		ImageIO.write(resizeImageJpg03, "jpg", new File(""+iphone6sPlus+"/pic5.jpg"));
-		
+
 		/*
 			@iphone 5/5s
 			@screen size: 4"
 		*/
-		
+
 		BufferedImage resizeImageJpg18 = resizeImage(640,1136,originalImage1, type1);
 		ImageIO.write(resizeImageJpg18, "jpg", new File(""+iphone5+"/pic1.jpg"));
 
@@ -107,12 +104,12 @@ public class screenShotParser
 
 		BufferedImage resizeImageJpg58 = resizeImage(640,1136,originalImage5, type5);
 		ImageIO.write(resizeImageJpg58, "jpg", new File(""+iphone5+"/pic5.jpg"));
-		
+
 		/*
 			@iphone 4s
 			@Screen Size: 3.5inch
 		*/
-		
+
 		BufferedImage resizeImageJpg17 = resizeImage(640,960,originalImage1, type1);
 		ImageIO.write(resizeImageJpg17, "jpg", new File(""+iphone4s+"/pic1.jpg"));
 
@@ -127,13 +124,13 @@ public class screenShotParser
 
 		BufferedImage resizeImageJpg57 = resizeImage(640,960,originalImage5, type5);
 		ImageIO.write(resizeImageJpg57, "jpg", new File(""+iphone4s+"/pic5.jpg"));
-		
+
 
 		/*
 			@ipad Air1/2 and Retina
 			@Screen Size :
 		*/
-		
+
 		BufferedImage resizeImageJpg13 = resizeImage(1536,2048,originalImage1, type1);
 		ImageIO.write(resizeImageJpg13, "jpg", new File(""+ipadAir+"/pic1.jpg"));
 
@@ -148,11 +145,11 @@ public class screenShotParser
 
 		BufferedImage resizeImageJpg53 = resizeImage(1536,2048,originalImage5, type5);
 		ImageIO.write(resizeImageJpg53, "jpg", new File(""+ipadAir+"/pic5.jpg"));
-		
+
 		/*
 			@ipad pro
 		*/
-		
+
 		BufferedImage resizeImageJpg15 = resizeImage(2048,2732,originalImage1, type1);
 		ImageIO.write(resizeImageJpg15, "jpg", new File(""+ipadPro+"/pic1.jpg"));
 
@@ -167,13 +164,13 @@ public class screenShotParser
 
 		BufferedImage resizeImageJpg55 = resizeImage(2048,2732,originalImage5, type5);
 		ImageIO.write(resizeImageJpg55, "jpg", new File(""+ipadPro+"/pic5.jpg"));
-		
 
-		
+
+
 	}catch(IOException e){
 	//	System.out.println(e.getMessage());
 	}
-		
+
     }
 
     private static BufferedImage resizeImage(int IMG_WIDTH,int IMG_HEIGHT,BufferedImage originalImage, int type){
@@ -181,16 +178,16 @@ public class screenShotParser
 		Graphics2D g = resizedImage.createGraphics();
 		g.drawImage(originalImage, 0, 0, IMG_WIDTH, IMG_HEIGHT, null);
 		g.dispose();
-		
+
 		return resizedImage;
     }
-	
+
     private static BufferedImage resizeImageWithHint(int IMG_WIDTH,int IMG_HEIGHT,BufferedImage originalImage, int type){
-		
+
 	BufferedImage resizedImage = new BufferedImage(IMG_WIDTH, IMG_HEIGHT, type);
 	Graphics2D g = resizedImage.createGraphics();
 	g.drawImage(originalImage, 0, 0, IMG_WIDTH, IMG_HEIGHT, null);
-	g.dispose();	
+	g.dispose();
 	g.setComposite(AlphaComposite.Src);
 
 	g.setRenderingHint(RenderingHints.KEY_INTERPOLATION,
@@ -199,7 +196,7 @@ public class screenShotParser
 	RenderingHints.VALUE_RENDER_QUALITY);
 	g.setRenderingHint(RenderingHints.KEY_ANTIALIASING,
 	RenderingHints.VALUE_ANTIALIAS_ON);
-	
+
 	return resizedImage;
-    }	
+    }
 }

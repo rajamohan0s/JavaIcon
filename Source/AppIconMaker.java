@@ -36,8 +36,8 @@ public class AppIconMaker
 	JLabel chooseLabel, chooseLabel1,chooseLabel2,chooseLabel3,chooseLabel4 , chooseDevice,statusLabel, destinationLabel;
 	JRadioButton selectFormat;
 	JRadioButton radApple = new JRadioButton("iOS App Icon", true);
-    JRadioButton radMango = new JRadioButton("Universal Ios Dvice Screens");
-    JRadioButton radPeer = new JRadioButton("About Me");
+  JRadioButton radMango = new JRadioButton("Universal Ios Dvice Screens");
+  JRadioButton radPeer = new JRadioButton("About Me");
 	JFileChooser  fileDialog = new JFileChooser();
 
 	public AppIconMaker()
@@ -390,13 +390,9 @@ public class AppIconMaker
 
          }
       });
-
-
-
-
-
 	}
-		public static void main(String args[])
+
+	public static void main(String args[])
 	{
 		SwingUtilities.invokeLater(new Runnable()
 		{

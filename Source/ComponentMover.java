@@ -372,10 +372,6 @@ public class ComponentMover extends MouseAdapter
 	}
 	public static void main(String args[])
 	{
-		
-			
-				new ComponentMover();
-			
-		
+		new ComponentMover();
 	}
 }

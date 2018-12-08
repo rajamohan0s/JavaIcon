@@ -6,7 +6,7 @@
   <img width = "634" height = "439" src="https://github.com/RAJAMOHAN-S/JavaIcon/raw/master/Source%20-%20Java%20/Source/images/demo.png" alt="Swift Scroll View">
 </p>
 
-Cross platform Java Swing application.
+Cross platform Java Swing application with custom title bar, close & minimize buttons, status bar concept.
 
 ## Features
 

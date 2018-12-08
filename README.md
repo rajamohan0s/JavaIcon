@@ -22,7 +22,7 @@ Cross platform Java Swing application.
 
 ` javac AppIconMaker.java`
 
-## Compile
+## Run
 
 `java AppIconMaker`
 
